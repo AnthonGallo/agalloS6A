@@ -11,7 +11,7 @@ namespace agalloS6A
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new vCrud());
+            return new Window(new NavigationPage(new Views.vCrud()));
         }
     }
 }

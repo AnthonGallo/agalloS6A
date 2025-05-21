@@ -22,4 +22,15 @@ public partial class vCrud : ContentPage
         _estudianteTeam = new ObservableCollection<Estudiante>(lista);
         lvEstudiantes.ItemsSource = _estudianteTeam;
     }
+
+    private void btnAgregar_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new vAgregarEstudiante());
+    }
+
+    private void lvEstudiantes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+        var objEstudiante = (Estudiante)e.SelectedItem;
+        Navigation.PushAsync(new vActEliminarEstudiante(objEstudiante));
+    }
 }

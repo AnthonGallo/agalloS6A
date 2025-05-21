@@ -20,7 +20,7 @@ public partial class vAgregarEstudiante : ContentPage
             {
                 Nombre = txtNombre.Text,
                 Apellido = txtApellido.Text,
-                Edad = int.Parse(txtEdad.Text) // Asegúrate de validar el input
+                Edad = int.Parse(txtEdad.Text)
             };
 
             string json = JsonConvert.SerializeObject(nuevoEstudiante);
